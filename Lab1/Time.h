@@ -1,28 +1,26 @@
 #pragma once
 
-#include <string.h>
-
+/// <summary>
+/// class for standart solar day with hours, minutes and seconds
+/// </summary>
 class Time {
 
 public:
 
 	/// <summary>
-	/// getter for hours.
-	/// <c>int hours = example.getHours();</c>
+	/// getter for hours
 	/// </summary>
 	/// <returns><c>int hours</c></returns>
 	int getHours();
 
 	/// <summary>
-	/// getter for minutes.
-	/// <c>int hours = example.getMinutes();</c>
+	/// getter for minutes
 	/// </summary>
 	/// <returns><c>int minutes</c></returns>
 	int getMinutes();
 
 	/// <summary>
-	/// getter for seconds.
-	/// <c>int hours = example.getSeconds();</c>
+	/// getter for seconds
 	/// </summary>
 	/// <returns><c>int seconds</c></returns>
 	int getSeconds();
@@ -32,35 +30,30 @@ public:
 	/// </summary>
 	/// <param name="hours"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setHours(int hours = 0);
+	bool setHours(int hoursParam = 0);
 
 	/// <summary>
-	/// setter for minutes checking correct value
+	/// setter for minutes with checking correct value
 	/// </summary>
 	/// <param name="minutes"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setMinutes(int minutes = 0);
+	bool setMinutes(int minutesParam = 0);
 
 	/// <summary>
-	/// setter for seconds checking correct value
+	/// setter for seconds with checking correct value
 	/// </summary>
 	/// <param name="seconds"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setSeconds(int seconds = 0);
+	bool setSeconds(int secondsParam = 0);
 
 	/// <summary>
-	/// setter for time checking correct value
+	/// setter for time with checking correct value
 	/// </summary>
 	/// <param name="hours"></param>
 	/// <param name="minutes"></param>
 	/// <param name="seconds"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setTime(int hours = 0, int minutes = 0, int seconds = 0);
-
-	/// <summary>
-	/// setting current time (machine time)
-	/// </summary>
-	void setCurrent();
+	/// <returns><c>true</c> if correct, else <c>false</c>; set time if all params are correct</returns>
+	bool setTime(int hoursParam = 0, int minutesParam = 0, int secondsParam = 0);
 
 private:
 
@@ -73,21 +66,21 @@ private:
 	/// </summary>
 	/// <param name="hours"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool checkHours(int hours);
+	bool checkHours(int hoursParam);
 
 	/// <summary>
 	/// cheching correct value of minutes
 	/// </summary>
 	/// <param name="minutes"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool checkMinutes(int minutes);
+	bool checkMinutes(int minutesParam);
 
 	/// <summary>
 	/// cheching correct value of seconds
 	/// </summary>
 	/// <param name="seconds"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool checkSeconds(int seconds);
+	bool checkSeconds(int secondsParam);
 
 	/// <summary>
 	/// cheching value 0 - 59
@@ -97,9 +90,9 @@ private:
 	bool check60(int param);
 
 	/// <summary>
-	/// cheching value 0 - 11
+	/// cheching value 0 - 23
 	/// </summary>
 	/// <param name="param"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool check12(int param);
+	bool check24(int param);
 };
