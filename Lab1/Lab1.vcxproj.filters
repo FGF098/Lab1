@@ -40,10 +40,18 @@
     <Filter Include="DateTime\DateAndTimeShift">
       <UniqueIdentifier>{708f260a-bfb4-4585-816c-cef5dbb28572}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{f6fc9ef7-6a76-40da-8467-28e54cbf5a9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
       <Filter>DateTime\Time</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

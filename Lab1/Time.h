@@ -6,6 +6,11 @@ class Time {
 
 public:
 
+	/// <summary>
+	/// getter for hours
+	/// <c>int hours = example.getHours();</c>
+	/// </summary>
+	/// <returns></returns>
 	int getHours();
 	int getMinutes();
 	int getSeconds();
