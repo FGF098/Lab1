@@ -13,5 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Console">
+      <UniqueIdentifier>{46450fa4-9c1d-4117-9f22-79d6e16e49ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DateTime">
+      <UniqueIdentifier>{f9a645b8-d84d-4d53-859d-6f6025042a68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="List">
+      <UniqueIdentifier>{a24316a3-7dd2-469d-b7ab-f19528751123}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
