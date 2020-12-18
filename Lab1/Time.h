@@ -71,7 +71,9 @@ public:
 private:
 
 	int hours;
+
 	int minutes;
+
 	int seconds;
 
 	/// <summary>
