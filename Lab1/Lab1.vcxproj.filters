@@ -46,6 +46,9 @@
     <Filter Include="DateTime\Shift\TimeShift">
       <UniqueIdentifier>{8be7b0d3-4709-431b-aa9d-5270e3ebf490}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DateTime\Shift\TimeShift\SecondsShift">
+      <UniqueIdentifier>{910a228b-d5f6-4ab8-8221-0a29e8be3e44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -74,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="TimeShift.h">
       <Filter>DateTime\Shift\TimeShift</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondsShift.h">
+      <Filter>DateTime\Shift\TimeShift\SecondsShift</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

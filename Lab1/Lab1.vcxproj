@@ -142,6 +142,7 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="DateTimeZone.h" />
     <ClInclude Include="Month.h" />
+    <ClInclude Include="SecondsShift.h" />
     <ClInclude Include="Shift.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="TimeShift.h" />
