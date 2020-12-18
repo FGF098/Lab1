@@ -144,6 +144,7 @@
     <ClInclude Include="Month.h" />
     <ClInclude Include="Shift.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="TimeShift.h" />
     <ClInclude Include="TimeZone.h" />
     <ClInclude Include="TimeZoneShift.h" />
     <ClInclude Include="Week.h" />

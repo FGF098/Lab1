@@ -43,6 +43,9 @@
     <Filter Include="DateTime\Shift\TimeZoneShift">
       <UniqueIdentifier>{976d976b-bcfb-4e81-95c0-c7ed0db55692}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DateTime\Shift\TimeShift">
+      <UniqueIdentifier>{8be7b0d3-4709-431b-aa9d-5270e3ebf490}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -68,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="TimeZoneShift.h">
       <Filter>DateTime\Shift\TimeZoneShift</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeShift.h">
+      <Filter>DateTime\Shift\TimeShift</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

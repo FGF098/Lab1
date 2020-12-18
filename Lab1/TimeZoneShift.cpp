@@ -13,3 +13,8 @@ TimeZoneShift::TimeZoneShift(TimeZone reduction, TimeZone subtractor) {
 		halfHour = false;
 	}
 }
+
+TimeZoneShift::TimeZoneShift(int shiftHourParam, bool halfHourParam) {
+	shiftHour = shiftHourParam;
+	halfHour = halfHourParam;
+}
