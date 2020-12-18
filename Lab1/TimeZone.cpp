@@ -18,7 +18,7 @@ bool TimeZone::IsHalf() {
 }
 
 TimeZone::TimeZone() {
-
+	set0();
 }
 
 TimeZone::TimeZone(int hourShiftParam, bool halfHourParam) {
@@ -27,7 +27,7 @@ TimeZone::TimeZone(int hourShiftParam, bool halfHourParam) {
 		halfHour = halfHourParam;
 	}
 	else {
-		set0;
+		set0();
 	}
 }
 

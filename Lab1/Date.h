@@ -121,7 +121,8 @@ private:
 	/// <summary>
 	/// get week name of a 1st January for this year using START_DATE
 	/// </summary>
-	void getJan1();
+	/// <return>jan1</return>
+	Week getJan1();
 
 	/// <summary>
 	/// Reset to a START_DATE

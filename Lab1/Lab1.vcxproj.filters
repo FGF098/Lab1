@@ -28,17 +28,17 @@
     <Filter Include="DateTime\Time">
       <UniqueIdentifier>{dd2d0766-d7c0-4dad-b98b-bb24a5e2fb86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DateTime\DateAndTime">
-      <UniqueIdentifier>{fc3f7ba2-17a8-434a-8ff8-24efc5da401c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DateTime\DateAndTimeShift">
-      <UniqueIdentifier>{708f260a-bfb4-4585-816c-cef5dbb28572}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{f6fc9ef7-6a76-40da-8467-28e54cbf5a9e}</UniqueIdentifier>
     </Filter>
     <Filter Include="DateTime\TimeZone">
       <UniqueIdentifier>{39ddfa71-a805-4e13-a9c0-e62537f3e2f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DateTime\DateTimeZone">
+      <UniqueIdentifier>{fc3f7ba2-17a8-434a-8ff8-24efc5da401c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DateTime\DateTimeZoneShift">
+      <UniqueIdentifier>{708f260a-bfb4-4585-816c-cef5dbb28572}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +57,9 @@
     <ClInclude Include="TimeZone.h">
       <Filter>DateTime\TimeZone</Filter>
     </ClInclude>
+    <ClInclude Include="DateTimeZone.h">
+      <Filter>DateTime\DateTimeZone</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -70,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="TimeZone.cpp">
       <Filter>DateTime\TimeZone</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTimeZone.cpp">
+      <Filter>DateTime\DateTimeZone</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
