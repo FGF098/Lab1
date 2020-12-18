@@ -78,27 +78,26 @@ public:
 	static int daysInMonth(Month monthParam, int yearParam);
 
 	/// <summary>
-	/// new date must be no smaller, than START_DATE
+	/// Creates START_DATE
+	/// </summary>
+	Date();
+
+	/// <summary>
+	/// creates given date if all params are correct, else creates START_DATE
 	/// </summary>
 	/// <param name="year"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setYear(int yearParam);
-
-	/// <summary>
-	/// new date must be no smaller, than START_DATE
-	/// </summary>
 	/// <param name="month"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setMonth(Month monthParam);
+	/// <param name="day"></param>
+	Date(int yearParam, Month monthParam, int dayParam);
 
 	/// <summary>
-	/// setter for day in month with chenking correct param based on current month; new date must be no smaller, than START_DATE
+	/// changes to a given date if all params are correct
 	/// </summary>
-	/// <param name="day"></param>
+	/// <param name="yearParam"></param>
+	/// <param name="monthParam"></param>
+	/// <param name="dayParam"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setDayMonth(int dayParam);
-
-	Date();
+	bool SetDate(int yearParam, Month monthParam, int dayParam);
 
 private:
 

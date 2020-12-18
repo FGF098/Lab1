@@ -72,48 +72,6 @@ Week Date::getDayWeek() {
 	return (Week)((getDaysToPast() + jan1) % 7);
 }
 
-bool Date::setYear(int yearParam) {
-	if (yearParam >= START_YEAR && ((month == START_MONTH && day >= START_DAY) || (month > START_MONTH))) {
-		year = yearParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool Date::setMonth(Month monthParam) {
-	if (year > START_YEAR) {
-		month = monthParam;
-		return true;
-	}
-	else if (year == START_YEAR && monthParam > START_MONTH) {
-		month = monthParam;
-		return true;
-	}
-	else if (year == START_YEAR && monthParam == START_MONTH && day >= START_DAY)
-	{
-		month = monthParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool Date::setDayMonth(int dayParam) {
-	if (dayParam > 0 && dayParam <= daysInMonth()) {
-		if (year == START_YEAR && month == START_MONTH && dayParam < START_DAY) {
-			return false;
-		}
-		day = dayParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
 int Date::getDaysToNext(Date dateParam) {
 	int res = daysInMonth(dateParam.month, dateParam.year) - dateParam.day;
 	for (Month i = December; i > dateParam.month; i = (Month)(i - 1)) {
@@ -153,6 +111,31 @@ int Date::getDaysOfYear() {
 
 Date::Date() {
 	set0();
+}
+
+Date::Date(int yearParam, Month monthParam, int dayParam) {
+	if ((yearParam > START_YEAR) || (yearParam == START_YEAR && monthParam > START_MONTH) ||
+		(yearParam == START_YEAR && monthParam == START_MONTH && dayParam >= START_DAY)) {
+		year = yearParam;
+		month = monthParam;
+		day = dayParam;
+	}
+	else {
+		set0();
+	}
+}
+
+bool Date::SetDate(int yearParam, Month monthParam, int dayParam) {
+	if ((yearParam > START_YEAR) || (yearParam == START_YEAR && monthParam > START_MONTH) ||
+		(yearParam == START_YEAR && monthParam == START_MONTH && dayParam >= START_DAY)) {
+		year = yearParam;
+		month = monthParam;
+		day = dayParam;
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 void Date::set0() {
