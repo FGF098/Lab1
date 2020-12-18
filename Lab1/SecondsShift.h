@@ -25,11 +25,6 @@ public:
 	/// <returns>minutes after optimizing</returns>
 	int getMinutes();
 
-	/// <summary>
-	/// transform oversize seconds to minutes, seconds will be positive after
-	/// </summary>
-	void Optimize();
-
 private:
 
 	int seconds;
@@ -38,4 +33,9 @@ private:
 	/// default zero initialization
 	/// </summary>
 	int minutes = 0;
+
+	/// <summary>
+	/// transform oversize seconds to minutes, seconds will be positive after
+	/// </summary>
+	void Optimize();
 };

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Console">
-      <UniqueIdentifier>{46450fa4-9c1d-4117-9f22-79d6e16e49ea}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DateTime">
       <UniqueIdentifier>{f9a645b8-d84d-4d53-859d-6f6025042a68}</UniqueIdentifier>
     </Filter>
@@ -27,9 +24,6 @@
     </Filter>
     <Filter Include="DateTime\Time">
       <UniqueIdentifier>{dd2d0766-d7c0-4dad-b98b-bb24a5e2fb86}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Main">
-      <UniqueIdentifier>{f6fc9ef7-6a76-40da-8467-28e54cbf5a9e}</UniqueIdentifier>
     </Filter>
     <Filter Include="DateTime\TimeZone">
       <UniqueIdentifier>{39ddfa71-a805-4e13-a9c0-e62537f3e2f8}</UniqueIdentifier>
@@ -48,6 +42,9 @@
     </Filter>
     <Filter Include="DateTime\Shift\TimeShift\SecondsShift">
       <UniqueIdentifier>{910a228b-d5f6-4ab8-8221-0a29e8be3e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DateTime\Shift\TimeShift\MinutesShift">
+      <UniqueIdentifier>{63c2dbdb-f79b-4efb-a7cb-7e330b7e20bc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,11 +78,11 @@
     <ClInclude Include="SecondsShift.h">
       <Filter>DateTime\Shift\TimeShift\SecondsShift</Filter>
     </ClInclude>
+    <ClInclude Include="MinutesShift.h">
+      <Filter>DateTime\Shift\TimeShift\MinutesShift</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="Time.cpp">
       <Filter>DateTime\Time</Filter>
     </ClCompile>
@@ -103,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="SecondShift.cpp">
       <Filter>DateTime\Shift\TimeShift\SecondsShift</Filter>
+    </ClCompile>
+    <ClCompile Include="MinutesShift.cpp">
+      <Filter>DateTime\Shift\TimeShift\MinutesShift</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
