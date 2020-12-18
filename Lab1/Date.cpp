@@ -68,6 +68,10 @@ int Date::getDayMonth() {
 	return day;
 }
 
+Week Date::getDayWeek() {
+	return (Week)((getDaysToPast() + jan1) % 7);
+}
+
 bool Date::setYear(int yearParam) {
 	if (yearParam >= START_YEAR && ((month == START_MONTH && day >= START_DAY) || (month > START_MONTH))) {
 		year = yearParam;
@@ -155,4 +159,13 @@ void Date::set0() {
 	year = START_YEAR;
 	month = START_MONTH;
 	day = START_DAY;
+}
+
+void Date::getJan1() {
+	int daysBetween = 0;
+	for (int i = START_YEAR + 1; i < this->year; i++) {
+		daysBetween += getDaysOfYear(i);
+	}
+	Date start;
+	jan1 = (Week)(getDaysToNext(start) + daysBetween + (getDaysToPast(*this)) % 7);
 }

@@ -21,10 +21,6 @@ public:
 	/// <returns>number of month in this year</returns>
 	Month getMonth();
 
-	// TODO:
-	/// <returns></returns>
-	int getWeek();
-
 	/// <returns>number of day in month</returns>
 	int getDayMonth();
 
@@ -119,7 +115,18 @@ private:
 	int day;
 
 	/// <summary>
+	/// week name of a 1st January for this year, using for faster calculating week names
+	/// </summary>
+	Week jan1;
+	
+	/// <summary>
+	/// get week name of a 1st January for this year using START_DATE
+	/// </summary>
+	void getJan1();
+
+	/// <summary>
 	/// Reset to a START_DATE
 	/// </summary>
 	void set0();
+
 };
