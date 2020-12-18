@@ -110,7 +110,48 @@ bool Date::setDayMonth(int dayParam) {
 	}
 }
 
+int Date::getDaysToNext(Date dateParam) {
+	int res = daysInMonth(dateParam.month, dateParam.year) - dateParam.day;
+	for (Month i = December; i > dateParam.month; i = (Month)(i - 1)) {
+		res += daysInMonth(i, dateParam.year);
+	}
+	return res;
+}
+
+int Date::getDaysToNext() {
+	return getDaysToNext(*this);
+}
+
+int Date::getDaysToPast(Date dateParam) {
+	int res = dateParam.day;
+	for (Month i = January; i < dateParam.month; i = (Month)(i + 1)) {
+		res += daysInMonth(i, dateParam.year);
+	}
+	return res;
+}
+
+int Date::getDaysToPast() {
+	return getDaysToPast(*this);
+}
+
+int Date::getDaysOfYear(int yearParam) {
+	if (IsYearLeap(yearParam)) {
+		return 366;
+	}
+	else {
+		return 365;
+	}
+}
+
+int Date::getDaysOfYear() {
+	return getDaysOfYear(this->year);
+}
+
 Date::Date() {
+	set0();
+}
+
+void Date::set0() {
 	year = START_YEAR;
 	month = START_MONTH;
 	day = START_DAY;

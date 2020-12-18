@@ -4,7 +4,7 @@
 /// names of months
 /// </summary>
 enum Month : int {
-	January = 1,
+	January,
 	February,
 	March,
 	April,

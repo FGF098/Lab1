@@ -4,7 +4,7 @@
 /// days names in week
 /// </summary>
 enum Week : int {
-	Monday = 1,
+	Monday,
 	Tuesday,
 	Wednesday,
 	Thursday,

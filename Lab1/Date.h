@@ -13,9 +13,9 @@ public:
 	const int START_YEAR = 1582;
 	const Month START_MONTH = October;
 	const int START_DAY = 4;
-	const Week START_Day = Monday;
+	const Week START_WEEK_DAY = Monday;
 
-	/// <returns>number of year, below zero if B.C.</returns>
+	/// <returns>number of year</returns>
 	int getYear();
 
 	/// <returns>number of month in this year</returns>
@@ -27,6 +27,27 @@ public:
 
 	/// <returns>number of day in month</returns>
 	int getDayMonth();
+
+	/// <param name="date"></param>
+	/// <returns>days to end of a year</returns>
+	static int getDaysToNext(Date dateParam);
+
+	/// <returns>days to end of a year for this date</returns>
+	int getDaysToNext();
+
+	/// <param name="date"></param>
+	/// <returns>days from start of a year</returns>
+	static int getDaysToPast(Date dateParam);
+
+	/// <returns>days from start of a year for this date</returns>
+	int getDaysToPast();
+
+	/// <param name="year"></param>
+	/// <returns>number of days in the year</returns>
+	static int getDaysOfYear(int yearParam);
+
+	/// <returns>number of days in the year for this date</returns>
+	int getDaysOfYear();
 
 	// TODO:
 	/// <returns>number of a day in week</returns>
@@ -97,4 +118,8 @@ private:
 	/// </summary>
 	int day;
 
+	/// <summary>
+	/// Reset to a START_DATE
+	/// </summary>
+	void set0();
 };
