@@ -37,8 +37,11 @@
     <Filter Include="DateTime\DateTimeZone">
       <UniqueIdentifier>{fc3f7ba2-17a8-434a-8ff8-24efc5da401c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DateTime\DateTimeZoneShift">
+    <Filter Include="DateTime\Shift">
       <UniqueIdentifier>{708f260a-bfb4-4585-816c-cef5dbb28572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DateTime\Shift\TimeZoneShift">
+      <UniqueIdentifier>{976d976b-bcfb-4e81-95c0-c7ed0db55692}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +63,12 @@
     <ClInclude Include="DateTimeZone.h">
       <Filter>DateTime\DateTimeZone</Filter>
     </ClInclude>
+    <ClInclude Include="Shift.h">
+      <Filter>DateTime\Shift</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeZoneShift.h">
+      <Filter>DateTime\Shift\TimeZoneShift</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -76,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="DateTimeZone.cpp">
       <Filter>DateTime\DateTimeZone</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeZoneShift.cpp">
+      <Filter>DateTime\Shift\TimeZoneShift</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
