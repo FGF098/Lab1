@@ -2,32 +2,26 @@
 
 #include "Time.h"
 
-class SecondShift {
+class SecondsShift {
 
 public:
 
 	/// <summary>
-	/// constructor for substraction
+	/// constructor for substraction, optimizing when calling
 	/// </summary>
 	/// <param name="reduction"></param>
 	/// <param name="subtractor"></param>
-	SecondShift(int reduction, int subtractor);
+	SecondsShift(int reduction, int subtractor);
 
 	/// <summary>
-	/// construntor for custom shift
+	/// constructor for custom shift, optimizing when calling
 	/// </summary>
-	/// <param name="secondShift"></param>
-	SecondShift(int secondShiftParam);
+	/// <param name="secondsShift"></param>
+	SecondsShift(int secondsShiftParam);
 
-	/// <summary>
-	/// Optimizing when calling
-	/// </summary>
 	/// <returns>optimized seconds shift</returns>
 	int getSecondsShift();
 
-	/// <summary>
-	/// Optimizing when calling
-	/// </summary>
 	/// <returns>minutes after optimizing</returns>
 	int getMinutes();
 
