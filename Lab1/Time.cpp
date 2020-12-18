@@ -44,35 +44,6 @@ void Time::set0() {
 	seconds = 0;
 }
 
-bool Time::setHours(int hoursParam) {
-	if (check24(hoursParam)) {
-		hours = hoursParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool Time::setMinutes(int minutesParam) {
-	if (check60(minutesParam)) {
-		minutes = minutesParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool Time::setSeconds(int secondsParam) {
-	if (check60(secondsParam)) {
-		seconds = secondsParam;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
 
 bool Time::setTime(int hoursParam, int minutesParam, int secondsParam) {
 	if (checkAll(hoursParam, minutesParam, secondsParam)) {

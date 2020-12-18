@@ -26,27 +26,6 @@ public:
 	int getSeconds();
 
 	/// <summary>
-	/// setter for hours with checking correct value
-	/// </summary>
-	/// <param name="hours"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setHours(int hoursParam = 0);
-
-	/// <summary>
-	/// setter for minutes with checking correct value
-	/// </summary>
-	/// <param name="minutes"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setMinutes(int minutesParam = 0);
-
-	/// <summary>
-	/// setter for seconds with checking correct value
-	/// </summary>
-	/// <param name="seconds"></param>
-	/// <returns><c>true</c> if correct, else <c>false</c></returns>
-	bool setSeconds(int secondsParam = 0);
-
-	/// <summary>
 	/// setter for time with checking correct value
 	/// </summary>
 	/// <param name="hours"></param>
