@@ -10,6 +10,11 @@ class Date {
 
 public:
 
+	const int START_YEAR = 1582;
+	const Month START_MONTH = October;
+	const int START_DAY = 4;
+	const Week START_Day = Monday;
+
 	/// <returns>number of year, below zero if B.C.</returns>
 	int getYear();
 
@@ -56,27 +61,27 @@ public:
 	static int daysInMonth(Month monthParam, int yearParam);
 
 	/// <summary>
-	/// 0 year is prohibited
+	/// new date must be no smaller, than START_DATE
 	/// </summary>
 	/// <param name="year"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
 	bool setYear(int yearParam);
 
+	/// <summary>
+	/// new date must be no smaller, than START_DATE
+	/// </summary>
 	/// <param name="month"></param>
-	void setMonth(Month monthParam);
+	/// <returns><c>true</c> if correct, else <c>false</c></returns>
+	bool setMonth(Month monthParam);
 
 	/// <summary>
-	/// setter for day in month with chenking correct param based on current month
+	/// setter for day in month with chenking correct param based on current month; new date must be no smaller, than START_DATE
 	/// </summary>
 	/// <param name="day"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
 	bool setDayMonth(int dayParam);
 
-	/// <summary>
-	/// create empty date
-	/// </summary>
 	Date();
-
 
 private:
 
