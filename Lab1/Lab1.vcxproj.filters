@@ -68,5 +68,8 @@
     <ClCompile Include="Date.cpp">
       <Filter>DateTime\Date</Filter>
     </ClCompile>
+    <ClCompile Include="TimeZone.cpp">
+      <Filter>DateTime\TimeZone</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

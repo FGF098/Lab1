@@ -15,7 +15,7 @@ public:
 
 	TimeZone(int hourParam, bool halfHourParam);
 
-	bool setTimeZone(int hourParam, bool halfHourParam);
+	bool setTimeZone(int hourShiftParam, bool halfHourParam);
 
 private:
 
@@ -26,4 +26,12 @@ private:
 	/// </summary>
 	bool halfHour;
 
+	/// <summary>
+	/// valid area: 0 - 23
+	/// </summary>
+	/// <param name="hour"></param>
+	/// <returns><c>true</c> if correct, else <c>false</c></returns>
+	bool checkHourShift(int hourParam);
+
+	void set0();
 };
