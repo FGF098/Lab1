@@ -145,6 +145,7 @@
     <ClInclude Include="Week.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>

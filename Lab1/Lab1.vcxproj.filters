@@ -65,5 +65,8 @@
     <ClCompile Include="Time.cpp">
       <Filter>DateTime\Time</Filter>
     </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>DateTime\Date</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

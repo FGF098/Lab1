@@ -31,8 +31,14 @@ public:
 	/// <returns><c>true</c> if leap year, else <c>false</c></returns>
 	bool IsYearLeap();
 
-	/// <param name="yearParam"></param>
-	/// <returns><c>true</c> if given year is intercalary, else <c>false</c></returns>
+	/// <summary>
+/// if <c>year % 4 == 0</c> -> intercalary year
+/// if <c>year % 100 == 0</c> -> not intercalary year
+/// if <c>year % 400 == 0</c> -> intercalary year
+/// if <c>year % 4 != 0</c> -> not intercalary year
+/// </summary>
+/// <param name="year"></param>
+/// <returns></returns>
 	static bool IsYearLeap(int yearParam);
 
 	/// <returns>days in current month and year</returns>
