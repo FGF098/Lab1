@@ -11,12 +11,12 @@ int SecondsShift::getSecondsShift() {
 void SecondsShift::Optimize() {
 	int secRes, minRes;
 	if (seconds >= 0) {
-		minRes = seconds / 60;
-		secRes = seconds % 60;
+		minRes = seconds / MINUTES_AND_SECONDS;
+		secRes = seconds % MINUTES_AND_SECONDS;
 	}
 	else {
-		minRes = seconds / 60 - 1;
-		secRes = 60 - seconds % 60;
+		minRes = seconds / MINUTES_AND_SECONDS - 1;
+		secRes = MINUTES_AND_SECONDS - seconds % MINUTES_AND_SECONDS;
 	}
 	seconds = secRes;
 	minutes = minRes;

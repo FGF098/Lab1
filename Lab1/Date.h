@@ -3,17 +3,17 @@
 #include "Week.h"
 #include "Month.h"
 
+const int START_YEAR = 1582;
+const Month START_MONTH = October;
+const int START_DAY = 4;
+const Week START_WEEK_DAY = Monday;
+
 /// <summary>
 /// class for standart gregorian date
 /// </summary>
 class Date {
 
 public:
-
-	const int START_YEAR = 1582;
-	const Month START_MONTH = October;
-	const int START_DAY = 4;
-	const Week START_WEEK_DAY = Monday;
 
 	/// <returns>number of year</returns>
 	int getYear();

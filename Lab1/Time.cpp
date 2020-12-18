@@ -3,11 +3,11 @@
 #include "Time.h"
 
 bool Time::check24(int param) {
-	return ((param >= 0) && (param < 24));
+	return ((param >= 0) && (param < HOURS_IN_DAY));
 }
 
 bool Time::check60(int param) {
-	return ((param >= 0) && (param < 60));
+	return ((param >= 0) && (param < MINUTES_AND_SECONDS));
 }
 
 bool Time::checkAll(int hoursParam, int minutesParam, int secondsParam) {

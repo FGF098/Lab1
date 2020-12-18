@@ -1,5 +1,8 @@
 #pragma once
 
+const int HOURS_IN_DAY = 24;
+const int MINUTES_AND_SECONDS = 60;
+
 /// <summary>
 /// class for standart solar day with hours, minutes and seconds
 /// </summary>
