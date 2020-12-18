@@ -10,6 +10,10 @@ bool Time::check60(int param) {
 	return ((param >= 0) && (param < 60));
 }
 
+bool Time::checkAll(int hoursParam, int minutesParam, int secondsParam) {
+	return checkHours(hoursParam) && checkMinutes(minutesParam) && checkSeconds(secondsParam);
+}
+
 bool Time::checkHours(int hours) {
 	return check24(hours);
 }
@@ -32,6 +36,12 @@ int Time::getMinutes() {
 
 int Time::getSeconds() {
 	return seconds;
+}
+
+void Time::set0() {
+	hours = 0;
+	minutes = 0;
+	seconds = 0;
 }
 
 bool Time::setHours(int hoursParam = 0) {
@@ -65,7 +75,7 @@ bool Time::setSeconds(int secondsParam = 0) {
 }
 
 bool Time::setTime(int hoursParam = 0, int minutesParam = 0, int secondsParam = 0) {
-	if (checkHours(hoursParam) && checkMinutes(minutesParam) && checkSeconds(secondsParam)) {
+	if (checkAll(hoursParam, minutesParam, secondsParam)) {
 		hours = hoursParam;
 		minutes = minutesParam;
 		seconds = secondsParam;
@@ -73,5 +83,20 @@ bool Time::setTime(int hoursParam = 0, int minutesParam = 0, int secondsParam = 
 	}
 	else {
 		return false;
+	}
+}
+
+Time::Time() {
+	set0;
+}
+
+Time::Time(int hoursParam, int minutesParam, int secondsParam) {
+	if (checkHours(hoursParam) && checkMinutes(minutesParam) && checkSeconds(secondsParam)) {
+		hours = hoursParam;
+		minutes = minutesParam;
+		seconds = secondsParam;
+	}
+	else {
+		set0();
 	}
 }

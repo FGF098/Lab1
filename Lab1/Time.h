@@ -55,6 +55,19 @@ public:
 	/// <returns><c>true</c> if correct, else <c>false</c>; set time if all params are correct</returns>
 	bool setTime(int hoursParam = 0, int minutesParam = 0, int secondsParam = 0);
 
+	/// <summary>
+	/// Creates zero time
+	/// </summary>
+	Time();
+
+	/// <summary>
+	/// Creates given time if all params are correct, else creates zero time
+	/// </summary>
+	/// <param name="hours"></param>
+	/// <param name="minutes"></param>
+	/// <param name="seconds"></param>
+	Time(int hoursParam, int minutesParam, int secondsParam);
+
 private:
 
 	int hours;
@@ -82,6 +95,8 @@ private:
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
 	bool checkSeconds(int secondsParam);
 
+	bool checkAll(int hoursParam, int minutesParam, int secondsParam);
+
 	/// <summary>
 	/// cheching value 0 - 59
 	/// </summary>
@@ -95,4 +110,9 @@ private:
 	/// <param name="param"></param>
 	/// <returns><c>true</c> if correct, else <c>false</c></returns>
 	bool check24(int param);
+
+	/// <summary>
+	/// Reset to zero time
+	/// </summary>
+	void set0();
 };
