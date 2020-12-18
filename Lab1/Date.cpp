@@ -51,3 +51,39 @@ int Date::daysInMonth(Month monthParam) {
 int Date::daysInMonth() {
 	return daysInMonth(this->month, this->year);
 }
+
+int Date::getYear() {
+	return year;
+}
+
+Month Date::getMonth() {
+	return month;
+}
+
+int Date::getDayMonth() {
+	return day;
+}
+
+bool Date::setYear(int yearParam) {
+	if (yearParam != 0) {
+		year = yearParam;
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+void Date::setMonth(Month monthParam) {
+	month = monthParam;
+}
+
+bool Date::setDayMonth(int dayParam) {
+	if (dayParam > 0 && dayParam <= daysInMonth()) {
+		day = dayParam;
+		return true;
+	}
+	else {
+		return false;
+	}
+}
