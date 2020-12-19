@@ -20,15 +20,15 @@ HoursShift::HoursShift(int reduction, int subtractor, int additional_hours, int 
 }
 
 void HoursShift::Optimize() {
-	int hourRes, dayRes;
 	if (hours >= 0) {
-		dayRes = hours / HOURS_IN_DAY;
-		hourRes = hours % HOURS_IN_DAY;
+		days = hours / HOURS_IN_DAY;
+		hours = hours % HOURS_IN_DAY;
 	}
 	else {
-		dayRes = hours / HOURS_IN_DAY - 1;
-		hourRes = HOURS_IN_DAY - hours % HOURS_IN_DAY;
+		while (hours < 0)
+		{
+			hours += HOURS_IN_DAY;
+			days--;
+		}
 	}
-	hours = hourRes;
-	days = dayRes;
 }

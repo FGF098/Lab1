@@ -160,7 +160,7 @@
     <ClCompile Include="HoursShift.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MinutesShift.cpp" />
-    <ClCompile Include="SecondShift.cpp" />
+    <ClCompile Include="SecondsShift.cpp" />
     <ClCompile Include="Shift.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="TimeShift.cpp" />

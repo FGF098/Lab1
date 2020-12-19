@@ -19,6 +19,7 @@ TimeShift::TimeShift(Time reduction, Time subtractor, TimeZoneShift zoneShift) {
 	int minutes = min.getMinutes();
 	HoursShift hou = HoursShift(reduction.getHours(), subtractor.getHours(), min.getHours(), zoneShift.getShiftHour());
 	int hours = hou.getHours();
-	timeShift = Time(hours, minutes, seconds);
+	timeShift = Time();
+	timeShift.setTime(hours, minutes, seconds);
 	additionalDay = hou.getDays();
 }

@@ -29,15 +29,15 @@ MinutesShift::MinutesShift(int reduction, int subtractor, int additional_minutes
 }
 
 void MinutesShift::Optimize() {
-	int hourRes, minRes;
 	if (minutes >= 0) {
-		hourRes = minutes / MINUTES_AND_SECONDS;
-		minRes = minutes % MINUTES_AND_SECONDS;
+		hours = minutes / MINUTES_AND_SECONDS;
+		minutes = minutes % MINUTES_AND_SECONDS;
 	}
 	else {
-		hourRes = minutes / MINUTES_AND_SECONDS - 1;
-		minRes = MINUTES_AND_SECONDS - minutes % MINUTES_AND_SECONDS;
+		while (minutes < 0)
+		{
+			minutes += MINUTES_AND_SECONDS;
+			hours--;
+		}
 	}
-	hours = hourRes;
-	minutes = minRes;
 }

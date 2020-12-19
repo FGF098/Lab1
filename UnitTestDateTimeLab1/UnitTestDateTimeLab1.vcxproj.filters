@@ -34,6 +34,15 @@
     <Filter Include="Shift\TimeShift">
       <UniqueIdentifier>{13eb8d89-d563-4460-b27b-a50c34f6162c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shift\TimeShift\SecondsShift">
+      <UniqueIdentifier>{8d088d9f-6a9c-4179-9c42-e764a5ec3587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shift\TimeShift\MinutesShift">
+      <UniqueIdentifier>{f6e443b4-dfcc-49f0-ad6d-a77f0f5783d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shift\TimeShift\HoursShift">
+      <UniqueIdentifier>{ae2c5744-21ef-4c5e-a478-5b54db6d194c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -56,6 +65,15 @@
     </ClCompile>
     <ClCompile Include="UnitTestTimeShift.cpp">
       <Filter>Shift\TimeShift</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestSecondsShift.cpp">
+      <Filter>Shift\TimeShift\SecondsShift</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestsMinutesShift.cpp">
+      <Filter>Shift\TimeShift\MinutesShift</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestHoursShift.cpp">
+      <Filter>Shift\TimeShift\HoursShift</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

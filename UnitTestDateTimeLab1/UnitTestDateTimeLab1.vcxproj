@@ -168,6 +168,9 @@
     </ClCompile>
     <ClCompile Include="TimeZoneShiftTest.cpp" />
     <ClCompile Include="UnitTestDate.cpp" />
+    <ClCompile Include="UnitTestHoursShift.cpp" />
+    <ClCompile Include="UnitTestSecondsShift.cpp" />
+    <ClCompile Include="UnitTestsMinutesShift.cpp" />
     <ClCompile Include="UnitTestTimeShift.cpp" />
     <ClCompile Include="UnitTestTimeZone.cpp" />
     <ClCompile Include="UnitTestTime.cpp" />

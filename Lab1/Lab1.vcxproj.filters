@@ -110,9 +110,6 @@
     <ClCompile Include="TimeZoneShift.cpp">
       <Filter>DateTime\Shift\TimeZoneShift</Filter>
     </ClCompile>
-    <ClCompile Include="SecondShift.cpp">
-      <Filter>DateTime\Shift\TimeShift\SecondsShift</Filter>
-    </ClCompile>
     <ClCompile Include="MinutesShift.cpp">
       <Filter>DateTime\Shift\TimeShift\MinutesShift</Filter>
     </ClCompile>
@@ -130,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondsShift.cpp">
+      <Filter>DateTime\Shift\TimeShift\SecondsShift</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
