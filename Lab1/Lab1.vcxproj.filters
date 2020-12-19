@@ -49,6 +49,9 @@
     <Filter Include="DateTime\Shift\TimeShift\HoursShift">
       <UniqueIdentifier>{d2cb45b2-110a-41d3-ad9b-f51c0a17f8e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DateTime\Shift\DateShift">
+      <UniqueIdentifier>{aabe282f-e33a-4650-8c41-41c836a9aa7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -87,6 +90,9 @@
     <ClInclude Include="HoursShift.h">
       <Filter>DateTime\Shift\TimeShift\HoursShift</Filter>
     </ClInclude>
+    <ClInclude Include="DateShift.h">
+      <Filter>DateTime\Shift\DateShift</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Time.cpp">
@@ -112,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="HoursShift.cpp">
       <Filter>DateTime\Shift\TimeShift\HoursShift</Filter>
+    </ClCompile>
+    <ClCompile Include="DateShift.cpp">
+      <Filter>DateTime\Shift\DateShift</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

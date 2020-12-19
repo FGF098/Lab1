@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Time.h"
-#include "SecondsShift.h"
 #include "TimeZoneShift.h"
 
 class MinutesShift {

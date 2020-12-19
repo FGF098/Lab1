@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Time.h"
-
 class SecondsShift {
 
 public:

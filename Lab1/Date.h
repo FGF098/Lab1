@@ -129,4 +129,17 @@ private:
 	/// </summary>
 	void set0();
 
+	/// <summary>
+	/// add given number of days to date
+	/// parameter must be non-negative, else iverting and calling reduDays()
+	/// </summary>
+	/// <param name="additional days"></param>
+	void addDays(int additionalDays);
+
+	/// <summary>
+	/// reduse given number of days to date
+	/// parameter must be non-negative, else iverting and calling addDays()
+	/// </summary>
+	/// <param name="reduced days"></param>
+	void reduDays(int reducedDays);
 };
