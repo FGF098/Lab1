@@ -1,5 +1,13 @@
 #include "TimeZoneShift.h"
 
+bool TimeZoneShift::getHalfHour() {
+	return halfHour;
+}
+
+int TimeZoneShift::getShiftHour() {
+	return shiftHour;
+}
+
 TimeZoneShift::TimeZoneShift(TimeZone reduction, TimeZone subtractor) {
 	shiftHour = reduction.getHourShift() - subtractor.getHourShift();
 	if (reduction.IsHalf() && !subtractor.IsHalf()) {

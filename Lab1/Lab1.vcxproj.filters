@@ -122,5 +122,11 @@
     <ClCompile Include="DateShift.cpp">
       <Filter>DateTime\Shift\DateShift</Filter>
     </ClCompile>
+    <ClCompile Include="Shift.cpp">
+      <Filter>DateTime\Shift</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeShift.cpp">
+      <Filter>DateTime\Shift\TimeShift</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

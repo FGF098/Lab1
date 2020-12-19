@@ -23,6 +23,10 @@ public:
 	/// <param name="halfHour"></param>
 	TimeZoneShift(int shiftHourParam, bool halfHourParam);
 
+	int getShiftHour();
+
+	bool getHalfHour();
+
 private:
 
 	int shiftHour;
