@@ -1,4 +1,5 @@
 #include "HoursShift.h"
+#include "Time.h"
 
 int HoursShift::getDays() {
 	return days;

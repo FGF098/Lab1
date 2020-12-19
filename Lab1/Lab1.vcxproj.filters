@@ -52,6 +52,9 @@
     <Filter Include="DateTime\Shift\DateShift">
       <UniqueIdentifier>{aabe282f-e33a-4650-8c41-41c836a9aa7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{78fd5efb-45fd-4085-bc74-82f7fd7c0f10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -127,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="TimeShift.cpp">
       <Filter>DateTime\Shift\TimeShift</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

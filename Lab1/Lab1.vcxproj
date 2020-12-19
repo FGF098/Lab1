@@ -158,6 +158,7 @@
     <ClCompile Include="DateShift.cpp" />
     <ClCompile Include="DateTimeZone.cpp" />
     <ClCompile Include="HoursShift.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MinutesShift.cpp" />
     <ClCompile Include="SecondShift.cpp" />
     <ClCompile Include="Shift.cpp" />

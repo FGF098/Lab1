@@ -1,5 +1,7 @@
 #include "SecondsShift.h"
 
+#include "Time.h"
+
 int SecondsShift::getMinutes() {
 	return minutes;
 }
