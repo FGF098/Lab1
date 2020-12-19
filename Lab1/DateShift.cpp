@@ -37,3 +37,7 @@ DateShift::DateShift(Date reduction, Date subtractor, int additionalDays) {
 	}
 	fullDayShift += additionalDays;
 }
+
+int DateShift::getFullDayShift() {
+	return fullDayShift;
+}

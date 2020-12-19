@@ -14,6 +14,10 @@ public:
 	/// <param name="additional days"></param>
 	DateShift(Date reduction, Date subtractor, int additionalDays);
 
+
+	/// <returns>full day shift</returns>
+	int getFullDayShift();
+
 private:
 
 	/// <summary>
