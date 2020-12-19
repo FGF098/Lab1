@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Time.h"
 
 bool Time::check24(int param) {
