@@ -35,5 +35,5 @@ DateShift::DateShift(Date reduction, Date subtractor, int additionalDays) {
 		}
 		fullDayShift = -(reduction.getDaysToNext() + daysBetween + subtractor.getDaysToPast());
 	}
-	fullDayShift ++ additionalDays;
+	fullDayShift += additionalDays;
 }
