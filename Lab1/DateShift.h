@@ -20,6 +20,6 @@ private:
 	/// reprezents all shift in days
 	/// default 0 for preparing to summing
 	/// </summary>
-	int fulDayShift = 0;
+	int fullDayShift = 0;
 
 };
