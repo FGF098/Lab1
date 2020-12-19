@@ -10,23 +10,7 @@ DateShift::DateShift(Date reduction, Date subtractor, int additionalDays) {
 		fullDayShift = reduction.getDaysToPast() + daysBetween + subtractor.getDaysToNext();
 	}
 	else if (reduction.getYear() == subtractor.getYear()) {
-		if (reduction.getMonth() > subtractor.getMonth()) {
-			int daysBetween = 0;
-			for (int i = subtractor.getMonth() + 1; i < reduction.getMonth(); i++) {
-				daysBetween += reduction.daysInMonth((Month)i);
-			}
-			fullDayShift = reduction.getDayMonth() + daysBetween + (subtractor.daysInMonth() - subtractor.getDayMonth());
-		}
-		else if (reduction.getMonth() == subtractor.getMonth()) {
-			fullDayShift = reduction.getDayMonth() - subtractor.getDayMonth();
-		}
-		else {
-			int daysBetween = 0;
-			for (int i = reduction.getMonth() + 1; i < subtractor.getMonth(); i++) {
-				daysBetween += reduction.daysInMonth((Month)i);
-			}
-			fullDayShift = -((reduction.daysInMonth() - reduction.getDayMonth()) + daysBetween + subtractor.getDayMonth());
-		}
+		fullDayShift = reduction.getDaysToPast() - subtractor.getDaysToPast();
 	}
 	else {
 		int daysBetween = 0;

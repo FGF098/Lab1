@@ -28,6 +28,12 @@
     <Filter Include="Shift\TimeZoneShift">
       <UniqueIdentifier>{c3d1f63b-2706-4115-b895-951ee8ae36dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shift\DateShift">
+      <UniqueIdentifier>{ebdfdbdc-131d-45a6-a5da-11a0b2ce9ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shift\TimeShift">
+      <UniqueIdentifier>{13eb8d89-d563-4460-b27b-a50c34f6162c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -44,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="TimeZoneShiftTest.cpp">
       <Filter>Shift\TimeZoneShift</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestDateShift.cpp">
+      <Filter>Shift\DateShift</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestTimeShift.cpp">
+      <Filter>Shift\TimeShift</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
