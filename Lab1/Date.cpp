@@ -1,19 +1,25 @@
 #include "Date.h"
+#include "DateShift.h"
 
-bool Date::IsYearLeap(int yearParam) {
+bool Date::isYearLeap(int yearParam) {
 	bool res;
-	res = yearParam % 4 == 0;
-	if (res && yearParam % 100 == 0) {
+	if (yearParam % 4 == 0) {
+		res = true;
+	}
+	else {
 		res = false;
 	}
-	if (res && yearParam % 400 == 0) {
+	if (yearParam % 100 == 0) {
+		res = false;
+	}
+	if (yearParam % 400 == 0) {
 		res = true;
 	}
 	return res;
 }
 
-bool Date::IsYearLeap() {
-	return Date::IsYearLeap(this->year);
+bool Date::isYearLeap() {
+	return Date::isYearLeap(this->year);
 }
 
 int Date::daysInMonth(Month monthParam, int yearParam) {
@@ -34,7 +40,7 @@ int Date::daysInMonth(Month monthParam, int yearParam) {
 		return 30;
 		break;
 	case February:
-		if (IsYearLeap(yearParam)) {
+		if (isYearLeap(yearParam)) {
 			return 29;
 		}
 		else {
@@ -68,6 +74,10 @@ int Date::getDayMonth() {
 	return day;
 }
 
+Week Date::getDayWeek() {
+	return dayWeek;
+}
+
 int Date::getDaysToNext(Date dateParam) {
 	int res = daysInMonth(dateParam.month, dateParam.year) - dateParam.day;
 	for (Month i = December; i > dateParam.month; i = (Month)(i - 1)) {
@@ -93,7 +103,7 @@ int Date::getDaysToPast() {
 }
 
 int Date::getDaysOfYear(int yearParam) {
-	if (IsYearLeap(yearParam)) {
+	if (isYearLeap(yearParam)) {
 		return 366;
 	}
 	else {
@@ -116,6 +126,9 @@ Date::Date(int yearParam, Month monthParam, int dayParam) {
 		year = yearParam;
 		month = monthParam;
 		day = dayParam;
+		Date start;
+		DateShift temp = DateShift(*this, start, 0);
+		dayWeek = (Week)(temp.getFullDayShift() % 7);
 	}
 	else {
 		set0();
@@ -129,6 +142,9 @@ bool Date::SetDate(int yearParam, Month monthParam, int dayParam) {
 		year = yearParam;
 		month = monthParam;
 		day = dayParam;
+		Date start = Date();
+		DateShift temp = DateShift(*this, start, 0);
+		dayWeek = (Week)(temp.getFullDayShift() % 7);
 		return true;
 	}
 	else {
@@ -140,6 +156,7 @@ void Date::set0() {
 	year = START_YEAR;
 	month = START_MONTH;
 	day = START_DAY;
+	dayWeek = START_WEEK;
 }
 
 void Date::addDays(int additionalDays) {

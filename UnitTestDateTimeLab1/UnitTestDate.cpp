@@ -4,6 +4,8 @@
 #include "../Lab1/Date.h"
 // fixes error LNK 2019 (based on StackOverflow answer)
 #include "../Lab1/Date.cpp"
+#include "../Lab1/Week.h"
+#include "../Lab1/DateShift.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -15,42 +17,43 @@ namespace UnitTestDateTimeLab1
 
 		TEST_METHOD(DefaultConstructorTest)
 		{
-			Date temp = Date();
-			bool sameYear = temp.getYear() == START_YEAR;
-			bool sameMonth = temp.getMonth() == START_MONTH;
-			bool sameDay = temp.getDayMonth() == START_DAY;
-			Assert::IsTrue(sameYear && sameMonth && sameDay);
+			Date temp;
+
+			Assert::IsTrue(temp.getYear() == START_YEAR);
+			Assert::IsTrue(temp.getMonth() == START_MONTH);
+			Assert::IsTrue(temp.getDayMonth() == START_DAY);
+			Assert::IsTrue(temp.getDayWeek() == START_WEEK);
 		}
 
 		TEST_METHOD(NormalConstructorTest)
 		{
-			int day = 3;
-			Month month = September;
-			int year = 1994;
+			int day = 14;
+			Month month = December;
+			int year = 2020;
+			Week dayWeek = Monday;
 
 			Date temp = Date(year, month, day);
 
-			bool sameYear = temp.getYear() == year;
-			bool sameMonth = temp.getMonth() == month;
-			bool sameDay = temp.getDayMonth() == day;
-
-			Assert::IsTrue(sameYear && sameMonth && sameDay);
+			Assert::IsTrue(temp.getYear() == year);
+			Assert::IsTrue(temp.getMonth() == month);
+			Assert::IsTrue(temp.getDayMonth() == day);
+			Assert::IsTrue(temp.getDayWeek() == dayWeek);
 		}
 
 		TEST_METHOD(NormalSetterTest)
 		{
-			int day = 4;
-			Month month = May;
-			int year = 1995;
+			int day = 15;
+			Month month = December;
+			int year = 2020;
+			Week dayWeek = Tuesday;
 
 			Date temp;
 			temp.SetDate(year, month, day);
 
-			bool sameYear = temp.getYear() == year;
-			bool sameMonth = temp.getMonth() == month;
-			bool sameDay = temp.getDayMonth() == day;
-
-			Assert::IsTrue(sameYear && sameMonth && sameDay);
+			Assert::IsTrue(temp.getYear() == year);
+			Assert::IsTrue(temp.getMonth() == month);
+			Assert::IsTrue(temp.getDayMonth() == day);
+			Assert::IsTrue(temp.getDayWeek() == dayWeek);
 		}
 
 		TEST_METHOD(InvalidConstructorTest)
@@ -66,22 +69,17 @@ namespace UnitTestDateTimeLab1
 			Date temp2 = Date(validYear, validMonth, invalidDay);
 			Date temp3 = Date(invalidYear, validMonth, invalidDay);
 
-			bool sameYear1 = temp1.getYear() == START_YEAR;
-			bool sameMonth1 = temp1.getMonth() == START_MONTH;
-			bool sameDay1 = temp1.getDayMonth() == START_DAY;
-			bool same1 = sameYear1 && sameMonth1 && sameDay1;
+			Assert::IsTrue(temp1.getYear() == START_YEAR);
+			Assert::IsTrue(temp1.getMonth() == START_MONTH);
+			Assert::IsTrue(temp1.getDayMonth() == START_DAY);
 
-			bool sameYear2 = temp2.getYear() == START_YEAR;
-			bool sameMonth2 = temp2.getMonth() == START_MONTH;
-			bool sameDay2 = temp2.getDayMonth() == START_DAY;
-			bool same2 = sameYear2 && sameMonth2 && sameDay2;
+			Assert::IsTrue(temp2.getYear() == START_YEAR);
+			Assert::IsTrue(temp2.getMonth() == START_MONTH);
+			Assert::IsTrue(temp2.getDayMonth() == START_DAY);
 
-			bool sameYear3 = temp3.getYear() == START_YEAR;
-			bool sameMonth3 = temp3.getMonth() == START_MONTH;
-			bool sameDay3 = temp3.getDayMonth() == START_DAY;
-			bool same3 = sameYear3 && sameMonth3 && sameDay3;
-
-			Assert::IsTrue(same1 && same2 && same3);
+			Assert::IsTrue(temp3.getYear() == START_YEAR);
+			Assert::IsTrue(temp3.getMonth() == START_MONTH);
+			Assert::IsTrue(temp3.getDayMonth() == START_DAY);
 		}
 
 		TEST_METHOD(InvalidSetterTest)
@@ -97,26 +95,66 @@ namespace UnitTestDateTimeLab1
 			Date temp2;
 			Date temp3;
 
-			bool valid1 = temp1.SetDate(invalidYear, validMonth, validDay);
-			bool valid2 = temp2.SetDate(validYear, validMonth, invalidDay);
-			bool valid3 = temp3.SetDate(invalidYear, validMonth, invalidDay);
+			Assert::IsFalse(temp1.SetDate(invalidYear, validMonth, validDay));
+			Assert::IsFalse(temp2.SetDate(validYear, validMonth, invalidDay));
+			Assert::IsFalse(temp3.SetDate(invalidYear, validMonth, invalidDay));
 
-			bool sameYear1 = temp1.getYear() == START_YEAR;
-			bool sameMonth1 = temp1.getMonth() == START_MONTH;
-			bool sameDay1 = temp1.getDayMonth() == START_DAY;
-			bool same1 = sameYear1 && sameMonth1 && sameDay1 && !valid1;
+			Assert::IsTrue(temp1.getYear() == START_YEAR);
+			Assert::IsTrue(temp1.getMonth() == START_MONTH);
+			Assert::IsTrue(temp1.getDayMonth() == START_DAY);
 
-			bool sameYear2 = temp2.getYear() == START_YEAR;
-			bool sameMonth2 = temp2.getMonth() == START_MONTH;
-			bool sameDay2 = temp2.getDayMonth() == START_DAY;
-			bool same2 = sameYear2 && sameMonth2 && sameDay2 && !valid2;
+			Assert::IsTrue(temp2.getYear() == START_YEAR);
+			Assert::IsTrue(temp2.getMonth() == START_MONTH);
+			Assert::IsTrue(temp2.getDayMonth() == START_DAY);
 
-			bool sameYear3 = temp3.getYear() == START_YEAR;
-			bool sameMonth3 = temp3.getMonth() == START_MONTH;
-			bool sameDay3 = temp3.getDayMonth() == START_DAY;
-			bool same3 = sameYear3 && sameMonth3 && sameDay3 && !valid3;
+			Assert::IsTrue(temp3.getYear() == START_YEAR);
+			Assert::IsTrue(temp3.getMonth() == START_MONTH);
+			Assert::IsTrue(temp3.getDayMonth() == START_DAY);
+		}
 
-			Assert::IsTrue(same1 && same2 && same3);
+		TEST_METHOD(LeapYearTest)
+		{
+			Assert::IsTrue(Date::isYearLeap(2000));
+			Assert::IsFalse(Date::isYearLeap(2100));
+			Assert::IsTrue(Date::isYearLeap(2004));
+			Assert::IsFalse(Date::isYearLeap(2003));
+		}
+
+		TEST_METHOD(Feb29Test)
+		{
+			int day = 29;
+			Month month = February;
+			Date temp;
+
+			Assert::IsTrue(temp.SetDate(2000, month, day));
+			Assert::IsFalse(temp.SetDate(2100, month, day));
+			Assert::IsTrue(temp.SetDate(2004, month, day));
+			Assert::IsFalse(temp.SetDate(2003, month, day));
+		}
+
+		TEST_METHOD(DaysInMonthtest)
+		{
+			Assert::IsTrue(Date::daysInMonth(February, 2020) == 29);
+			Assert::IsTrue(Date::daysInMonth(February, 2021) == 28);
+			Assert::IsTrue(Date::daysInMonth(September, 2019) == 30);
+			Assert::IsTrue(Date::daysInMonth(August, 2022) == 31);
+		}
+
+		TEST_METHOD(DaysOfYearTest)
+		{
+			Assert::IsTrue(Date::getDaysOfYear(2020) == 366);
+			Assert::IsTrue(Date::getDaysOfYear(2000) == 366);
+			Assert::IsTrue(Date::getDaysOfYear(2001) == 365);
+			Assert::IsTrue(Date::getDaysOfYear(2100) == 365);
+		}
+
+		TEST_METHOD(DaysToNextAndPastTest)
+		{
+			Date temp1 = Date(2020, November, 29);
+			Date temp2 = Date(2020, March, 3);
+
+			Assert::IsTrue(temp1.getDaysToNext() == 32);
+			Assert::IsTrue(temp2.getDaysToPast() == 63);
 		}
 	};
 }

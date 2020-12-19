@@ -93,6 +93,9 @@
     <ClInclude Include="DateShift.h">
       <Filter>DateTime\Shift\DateShift</Filter>
     </ClInclude>
+    <ClInclude Include="Week.h">
+      <Filter>DateTime\Date</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Time.cpp">

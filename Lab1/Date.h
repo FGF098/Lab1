@@ -1,10 +1,12 @@
 #pragma once
 
 #include "Month.h"
+#include "Week.h"
 
 const int START_YEAR = 1582;
 const Month START_MONTH = October;
 const int START_DAY = 4;
+const Week START_WEEK = Monday;
 
 /// <summary>
 /// class for standart gregorian date
@@ -21,6 +23,8 @@ public:
 
 	/// <returns>number of day in month</returns>
 	int getDayMonth();
+
+	Week getDayWeek();
 
 	/// <param name="date"></param>
 	/// <returns>days to end of a year</returns>
@@ -47,7 +51,7 @@ public:
 	/// is this year intercalary
 	/// </summary>
 	/// <returns><c>true</c> if leap year, else <c>false</c></returns>
-	bool IsYearLeap();
+	bool isYearLeap();
 
 	/// <summary>
 	/// if <c>year % 4 == 0</c> -> intercalary year
@@ -57,7 +61,7 @@ public:
 	/// </summary>
 	/// <param name="year"></param>
 	/// <returns><c>true</c> if year are intercalary, else <c>false</c></returns>
-	static bool IsYearLeap(int yearParam);
+	static bool isYearLeap(int yearParam);
 
 	/// <returns>days in current month and year</returns>
 	int daysInMonth();
@@ -106,6 +110,8 @@ private:
 	/// number of day in month
 	/// </summary>
 	int day;
+
+	Week dayWeek;
 
 	/// <summary>
 	/// Reset to a START_DATE
