@@ -7,6 +7,5 @@ using namespace std;
 /// </summary>
 /// <returns></returns>
 int main() {
-	Date temp = Date();
 	return 0;
 }
