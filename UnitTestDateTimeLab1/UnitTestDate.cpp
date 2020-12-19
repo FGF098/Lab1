@@ -83,5 +83,40 @@ namespace UnitTestDateTimeLab1
 
 			Assert::IsTrue(same1 && same2 && same3);
 		}
+
+		TEST_METHOD(InvalidSetterTest)
+		{
+			int invalidDay = 34;
+			int invalidYear = START_YEAR - 3;
+
+			int validDay = 6;
+			Month validMonth = March;
+			int validYear = 2020;
+
+			Date temp1;
+			Date temp2;
+			Date temp3;
+
+			bool valid1 = temp1.SetDate(invalidYear, validMonth, validDay);
+			bool valid2 = temp2.SetDate(validYear, validMonth, invalidDay);
+			bool valid3 = temp3.SetDate(invalidYear, validMonth, invalidDay);
+
+			bool sameYear1 = temp1.getYear() == START_YEAR;
+			bool sameMonth1 = temp1.getMonth() == START_MONTH;
+			bool sameDay1 = temp1.getDayMonth() == START_DAY;
+			bool same1 = sameYear1 && sameMonth1 && sameDay1 && !valid1;
+
+			bool sameYear2 = temp2.getYear() == START_YEAR;
+			bool sameMonth2 = temp2.getMonth() == START_MONTH;
+			bool sameDay2 = temp2.getDayMonth() == START_DAY;
+			bool same2 = sameYear2 && sameMonth2 && sameDay2 && !valid2;
+
+			bool sameYear3 = temp3.getYear() == START_YEAR;
+			bool sameMonth3 = temp3.getMonth() == START_MONTH;
+			bool sameDay3 = temp3.getDayMonth() == START_DAY;
+			bool same3 = sameYear3 && sameMonth3 && sameDay3 && !valid3;
+
+			Assert::IsTrue(same1 && same2 && same3);
+		}
 	};
 }

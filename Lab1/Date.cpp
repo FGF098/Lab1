@@ -123,8 +123,9 @@ Date::Date(int yearParam, Month monthParam, int dayParam) {
 }
 
 bool Date::SetDate(int yearParam, Month monthParam, int dayParam) {
-	if ((yearParam > START_YEAR) || (yearParam == START_YEAR && monthParam > START_MONTH) ||
-		(yearParam == START_YEAR && monthParam == START_MONTH && dayParam >= START_DAY)) {
+	if (((yearParam > START_YEAR) || (yearParam == START_YEAR && monthParam > START_MONTH) ||
+		(yearParam == START_YEAR && monthParam == START_MONTH && dayParam >= START_DAY)) &&
+		(dayParam <= daysInMonth(monthParam, yearParam))) {
 		year = yearParam;
 		month = monthParam;
 		day = dayParam;
