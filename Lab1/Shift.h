@@ -19,7 +19,7 @@ public:
 
 private:
 
-	int dayshift;
+	int dayShift;
 
 	/// <summary>
 	/// This time wiil be non-negative
