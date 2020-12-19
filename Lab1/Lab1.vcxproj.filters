@@ -16,9 +16,6 @@
     <Filter Include="DateTime">
       <UniqueIdentifier>{f9a645b8-d84d-4d53-859d-6f6025042a68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="List">
-      <UniqueIdentifier>{a24316a3-7dd2-469d-b7ab-f19528751123}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DateTime\Date">
       <UniqueIdentifier>{664eb0d7-fcea-4773-a018-ce51e9d73437}</UniqueIdentifier>
     </Filter>

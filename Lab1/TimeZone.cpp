@@ -1,7 +1,9 @@
 #include "TimeZone.h"
 
+#include "Time.h"
+
 bool TimeZone::checkHourShift(int hourParam) {
-	if (hourParam >= 0 && hourParam < 24) {
+	if (hourParam >= 0 && hourParam < HOURS_IN_DAY) {
 		return true;
 	}
 	else {

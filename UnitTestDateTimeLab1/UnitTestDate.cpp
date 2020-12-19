@@ -4,14 +4,16 @@
 #include "../Lab1/Date.h"
 // fixes error LNK 2019 (based on StackOverflow answer)
 #include "../Lab1/Date.cpp"
-#include "../Lab1/Week.h"
 #include "../Lab1/DateShift.cpp"
+
+// for constants
+#include "../Lab1/Week.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTestDateTimeLab1
 {
-	TEST_CLASS(DateUnitTest)
+	TEST_CLASS(UnitTestDate)
 	{
 	public:
 

@@ -1,5 +1,8 @@
 #include "TimeZoneShift.h"
 
+// for constants
+#include "Time.h"
+
 bool TimeZoneShift::getHalfHour() {
 	return halfHour;
 }
@@ -23,6 +26,12 @@ TimeZoneShift::TimeZoneShift(TimeZone reduction, TimeZone subtractor) {
 }
 
 TimeZoneShift::TimeZoneShift(int shiftHourParam, bool halfHourParam) {
-	shiftHour = shiftHourParam;
-	halfHour = halfHourParam;
+	if (shiftHourParam < HOURS_IN_DAY && shiftHourParam >= 0) {
+		shiftHour = shiftHourParam;
+		halfHour = halfHourParam;
+	}
+	else {
+		shiftHour = 0;
+		halfHour = false;
+	}
 }
