@@ -154,3 +154,55 @@ Week Date::getJan1() {
 	Date start;
 	return (Week)(getDaysToNext(start) + daysBetween + (getDaysToPast(*this)) % 7);
 }
+
+void Date::addDays(int additionalDays) {
+	if (additionalDays < 0) {
+		additionalDays = -additionalDays;
+		reduDays(additionalDays);
+	}
+	else {
+		while (additionalDays > getDaysToNext()) {
+			additionalDays -= (getDaysToNext() + 1);
+			year++;
+			month = January;
+			day = 1;
+		}
+		while (additionalDays > (daysInMonth() - day)) {
+			additionalDays -= (daysInMonth() - day + 1);
+			if (month == December) {
+				month = January;
+			}
+			else {
+				month = (Month)(month + 1);
+			}
+			day = 1;
+		}
+		day += additionalDays;
+	}
+}
+
+void Date::reduDays(int reducedDays) {
+	if (reducedDays < 0) {
+		reducedDays = -reducedDays;
+		addDays(reducedDays);
+	}
+	else {
+		while (reducedDays > getDaysToPast()) {
+			reducedDays -= (getDaysToPast() + 1);
+			year--;
+			month = January;
+			day = 1;
+		}
+		while (reducedDays > day) {
+			reducedDays -= (day + 1);
+			if (month == January) {
+				month = December;
+			}
+			else {
+				month = (Month)(month - 1);
+			}
+			day = daysInMonth();
+		}
+		day -= reducedDays;
+	}
+}
