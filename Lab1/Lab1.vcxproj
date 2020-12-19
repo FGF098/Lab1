@@ -151,7 +151,6 @@
     <ClInclude Include="TimeShift.h" />
     <ClInclude Include="TimeZone.h" />
     <ClInclude Include="TimeZoneShift.h" />
-    <ClInclude Include="Week.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Date.cpp" />

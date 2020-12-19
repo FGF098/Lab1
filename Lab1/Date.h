@@ -45,10 +45,6 @@ public:
 	/// <returns>number of days in the year for this date</returns>
 	int getDaysOfYear();
 
-	// TODO:
-	/// <returns>number of a day in week</returns>
-	Week getDayWeek();
-
 	/// <summary>
 	/// is this year intercalary
 	/// </summary>
@@ -112,17 +108,6 @@ private:
 	/// number of day in month
 	/// </summary>
 	int day;
-
-	/// <summary>
-	/// week name of a 1st January for this year, using for faster calculating week names
-	/// </summary>
-	Week jan1;
-	
-	/// <summary>
-	/// get week name of a 1st January for this year using START_DATE
-	/// </summary>
-	/// <return>jan1</return>
-	Week getJan1();
 
 	/// <summary>
 	/// Reset to a START_DATE

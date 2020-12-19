@@ -19,6 +19,9 @@
     <Filter Include="TimeZone">
       <UniqueIdentifier>{73c3b356-6f08-47c0-8a52-00e40d4615a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Date">
+      <UniqueIdentifier>{463fe3eb-c83f-4225-9e61-ab873b1ab886}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="UnitTestTimeZone.cpp">
       <Filter>TimeZone</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTestDate.cpp">
+      <Filter>Date</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

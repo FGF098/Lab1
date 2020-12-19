@@ -63,9 +63,6 @@
     <ClInclude Include="Date.h">
       <Filter>DateTime\Date</Filter>
     </ClInclude>
-    <ClInclude Include="Week.h">
-      <Filter>DateTime\Date</Filter>
-    </ClInclude>
     <ClInclude Include="Month.h">
       <Filter>DateTime\Date</Filter>
     </ClInclude>
